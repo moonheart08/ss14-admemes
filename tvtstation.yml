@@ -1,0 +1,98 @@
+- type: job
+  id: ProSkub
+  name: "pro-skub"
+  startingGear: SkubGear
+  departments:
+  - Command
+  icon: "Clown"
+  supervisors: "nobody"
+  access:
+  # All of em.
+  # Could probably do with some kind of wildcard or whatever to automate this.
+  # HELL FUCKING YEAH WE COULD
+  # Guys please don't fight
+  - Captain
+  - HeadOfPersonnel
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - HeadOfSecurity
+  - ResearchDirector
+  - Command
+  - Security
+  - Armory
+  # - Brig
+  - Engineering
+  - Medical
+  - Cargo
+  - Research
+  - Service
+  - Maintenance
+  - External
+  - Janitor
+  - Theatre
+  - Bar
+  - Chemistry
+
+- type: job
+  id: AntiSkub
+  name: "anti-skub"
+  startingGear: AssistantGear
+  departments:
+  - Command
+  icon: "Clown"
+  supervisors: "nobody"
+  access:
+  # All of em.
+  # Could probably do with some kind of wildcard or whatever to automate this.
+  # HELL FUCKING YEAH WE COULD
+  # Guys please don't fight
+  - Captain
+  - HeadOfPersonnel
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - HeadOfSecurity
+  - ResearchDirector
+  - Command
+  - Security
+  - Armory
+  # - Brig
+  - Engineering
+  - Medical
+  - Cargo
+  - Research
+  - Service
+  - Maintenance
+  - External
+  - Janitor
+  - Theatre
+  - Bar
+  - Chemistry
+
+- type: gameMap
+  id: tvtstation
+  mapName: 'Team Battle Station'
+  mapNameTemplate: '{0} Teamstation {1}'
+  nameGenerator:
+    !type:NanotrasenNameGenerator
+    prefixCreator: 'VG'
+  mapPath: Maps/packedstation.yml
+  minPlayers: 0
+  overflowJobs:
+  - ProSkub
+  - AntiSkub
+  availableJobs:
+    ProSkub: [-1, -1]
+    AntiSkub: [-1, -1]
+
+- type: startingGear
+  id: SkubGear
+  equipment:
+    innerclothing: ClothingUniformJumpsuitColorGrey
+    backpack: ClothingBackpackFilled
+    shoes: ClothingShoesColorBlack
+    head: ClothingHeadHatSkub
+    idcard: AssistantPDA
+    ears: ClothingHeadsetService
+    outerclothing: ClothingOuterSkub
+  satchel: ClothingBackpackSatchelFilled
+  duffelbag: ClothingBackpackDuffelFilled
