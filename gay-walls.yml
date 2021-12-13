@@ -1,0 +1,14 @@
+- type: entity
+  id: WallRainbow
+  name: rainbow wall
+  parent: WallSolid
+  description: Wow! Very gay, LGBT rights!
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: RgbLightController
+      cycleRate: 2
+    - type: PointLight
+      enabled: false
