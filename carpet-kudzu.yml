@@ -1,0 +1,35 @@
+- type: entity
+  id: CarpetSpreader
+  name: carpet?
+  parent: Carpet
+  suffix: Spreader
+  description: A rapidly growing, "dangerous" carpet. Wait, what?
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: Transform
+      anchored: true
+    - type: Spreader
+      growthResult: CarpetSpreader
+
+
+
+- type: entity
+  id: CarpetRainbowSpreader
+  name: carpet?
+  parent: CarpetSpreader
+  suffix: Rainbow, Spreader
+  description: A rapidly growing, "dangerous" rainbow carpet. Wait, what?
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: RgbLightController
+      cycleRate: 2
+    - type: PointLight
+      enabled: false
+    - type: Spreader
+      growthResult: CarpetRainbowSpreader

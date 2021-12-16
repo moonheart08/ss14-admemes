@@ -1,0 +1,15 @@
+- type: entity
+  id: AirlockSpreader
+  name: airlock?
+  parent: Airlock
+  suffix: Spreader
+  description: A rapidly growing, dangerous airlock. Wait, what?
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: Transform
+      anchored: true
+    - type: Spreader
+      growthResult: AirlockSpreader
