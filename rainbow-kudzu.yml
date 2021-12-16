@@ -1,0 +1,16 @@
+- type: entity
+  id: RainbowKudzu
+  name: rainbow kudzu
+  parent: Kudzu
+  description: A rapidly growing, dangerous plant. This one is disco.
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: RgbLightController
+      cycleRate: 2
+    - type: PointLight
+      enabled: false
+    - type: Spreader
+      growthResult: RainbowKudzu

@@ -1,0 +1,15 @@
+- type: entity
+  id: CursedLockerSpreader
+  name: locker?
+  parent: ClosetCursed
+  suffix: Cursed, Spreader
+  description: A rapidly growing, dangerous locker. It looks ominous.
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: Transform
+      anchored: true
+    - type: Spreader
+      growthResult: CursedLockerSpreader
